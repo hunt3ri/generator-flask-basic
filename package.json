@@ -1,0 +1,32 @@
+{
+  "name": "generator-python-flask-basic",
+  "version": "1.0.0",
+  "description": "Basic python flask scaffold",
+  "main": "manage.py",
+  "scripts": {
+    "test": "python manage.py runserver"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hunt3ri/flask-scaffold.git"
+  },
+   "files": [
+     "app",
+     "manage.py",
+     ".gitignore"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.18.9",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "author": "Iain Hunter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hunt3ri/flask-scaffold/issues"
+  },
+  "homepage": "https://github.com/hunt3ri/flask-scaffold"
+}
