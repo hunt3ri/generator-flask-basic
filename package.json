@@ -15,7 +15,9 @@
      ".gitignore"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "python",
+    "flask"
   ],
   "dependencies": {
     "yeoman-generator": "^0.18.9",
