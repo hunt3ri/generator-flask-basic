@@ -12,7 +12,6 @@
   },
    "files": [
      "app",
-     "manage.py",
      ".gitignore"
   ],
   "keywords": [
@@ -24,7 +23,7 @@
     "yosay": "^1.0.2"
   },
   "author": "Iain Hunter",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hunt3ri/generator-flask-basic/issues"
   },
