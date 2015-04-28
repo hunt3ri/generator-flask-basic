@@ -1,6 +1,2 @@
-# Python
-*.pyc
 venv
-
-# Pycharm
 .idea
