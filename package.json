@@ -1,5 +1,5 @@
 {
-  "name": "generator-python-flask-basic",
+  "name": "generator-flask-basic",
   "version": "1.0.0",
   "description": "Basic python flask scaffold",
   "main": "manage.py",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hunt3ri/flask-scaffold.git"
+    "url": "https://github.com/hunt3ri/generator-flask-basic"
   },
    "files": [
      "app",
@@ -26,7 +26,7 @@
   "author": "Iain Hunter",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hunt3ri/flask-scaffold/issues"
+    "url": "https://github.com/hunt3ri/generator-flask-basic/issues"
   },
-  "homepage": "https://github.com/hunt3ri/flask-scaffold"
+  "homepage": "https://github.com/hunt3ri/generator-flask-basic"
 }
