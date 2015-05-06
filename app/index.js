@@ -45,6 +45,12 @@ module.exports = yeoman.generators.Base.extend({
             this.copy('_root/.gitignore', this.appName + '/.gitignore', null);
             this.copy('_root/requirements.txt', this.appName + '/requirements.txt', null);
 
+            this.fs.copyTpl(
+                this.templatePath('_root/package.json'),
+                this.destinationPath(this.appName + '/package.json'),
+                {name: this.appName}
+            );
+
         }
     },
 
