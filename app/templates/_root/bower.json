@@ -1,0 +1,15 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "main": "manage.py",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {  },
+  "devDependencies": {  }
+}
