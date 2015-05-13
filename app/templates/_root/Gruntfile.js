@@ -21,6 +21,15 @@ module.exports = function(grunt) {
 
     });
 
+    grunt.loadNpmTasks("grunt-contrib-cssmin")
+    grunt.config("cssmin", {
+        app: {
+            files: {
+                'app/static/css/main-min.css': ['app/static/css/main.css']
+            }
+        }
+    });
+
     grunt.loadNpmTasks("grunt-targethtml");
     grunt.config("targethtml", {
         "prod": {
@@ -35,6 +44,6 @@ module.exports = function(grunt) {
        grunt.log.writeln('Welcome to the Flask Scaffold app, add targets in the build function');
     });
 
-    grunt.registerTask('build', ['bower-install-simple', 'targethtml']);
+    grunt.registerTask('build', ['bower-install-simple', 'cssmin', 'targethtml']);
 
 };
