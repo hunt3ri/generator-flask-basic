@@ -44,7 +44,7 @@ module.exports = yeoman.generators.Base.extend({
             this.copy('_root/manage.py', this.appName + '/manage.py', null);
             this.copy('_root/.gitignore', this.appName + '/.gitignore', null);
             this.copy('_root/requirements.txt', this.appName + '/requirements.txt', null);
-            this.copy('_root/Gruntfile.js', this.appName + '/Gruntfile.js', null);
+            this.copy('_root/gruntfile.js', this.appName + '/gruntfile.js', null);
 
             this.fs.copyTpl(
                 this.templatePath('_root/package.json'),
