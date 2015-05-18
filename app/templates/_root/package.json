@@ -13,6 +13,7 @@
     "grunt": "^0.4.5"
   },
   "devDependencies": {
+    "grunt-bowercopy": "^1.2.0",
     "grunt-contrib-cssmin": "^0.12.3",
     "grunt-targethtml": "^0.2.6"
   }

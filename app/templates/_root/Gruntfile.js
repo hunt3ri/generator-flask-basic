@@ -1,6 +1,21 @@
 module.exports = function(grunt) {
 
 
+    grunt.loadNpmTasks("grunt-bowercopy");
+    grunt.config("bowercopy", {
+        options: {
+            srcPrefix: 'bower_components'
+        },
+        scripts: {
+            options: {
+                destPrefix: 'app/static/scripts/vendor'
+            },
+            files: {
+                'angular/angular.js': 'angular/angular.js'
+            }
+        }
+    });
+
     grunt.loadNpmTasks("grunt-contrib-cssmin")
     grunt.config("cssmin", {
         app: {
@@ -24,6 +39,6 @@ module.exports = function(grunt) {
        grunt.log.writeln('Welcome to the Flask Scaffold app, add targets in the build function');
     });
 
-    grunt.registerTask('build', ['cssmin', 'targethtml']);
+    grunt.registerTask('build', ['bowercopy', 'cssmin', 'targethtml']);
 
 };
