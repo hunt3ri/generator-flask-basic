@@ -11,6 +11,9 @@
     <!(endif)-->
     <title>Hello World</title>
 </head>
-<body>
+<body data-ng-app="myApp">
      {% block page_content %}{% endblock %}
+     <script src="{{ url_for('static', filename='scripts/vendor/angular/angular.js') }}"></script>
+     <script src="{{ url_for('static', filename='scripts/app.js') }}"></script>
+     <script src="{{ url_for('static', filename='scripts/controllers.js') }}"></script>
 </body>
