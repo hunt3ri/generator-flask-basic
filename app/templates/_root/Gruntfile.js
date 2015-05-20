@@ -39,7 +39,8 @@ module.exports = function(grunt) {
        grunt.log.writeln('Welcome to the Flask Scaffold app, add targets in the build function');
     });
 
-    /* TODO Create Package Task */
-    grunt.registerTask('build', ['bowercopy', 'cssmin', 'targethtml']);
+    grunt.registerTask('build', 'Builds the app', ['bowercopy']);
+
+    grunt.registerTask('package', 'Task for packaging up app ready for deployment', ['cssmin', 'targethtml']);
 
 };
