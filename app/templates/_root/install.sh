@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 echo ""
 echo "Installing Javascript Dependencies"
-echo "==============================="
+echo "=================================="
 echo ""
 
 npm install
