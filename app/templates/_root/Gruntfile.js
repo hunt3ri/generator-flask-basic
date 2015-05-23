@@ -25,6 +25,29 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.config('concat', {
+        options: {
+            separator: ';'
+         },
+        scripts: {
+            src: ['app/static/scripts/vendor/angular/angular.js',
+                 'app/static/scripts/app.js',
+                 'app/static/scripts/controllers.js',
+                 'app/static/scripts/directives.js'],
+            dest: 'app/static/scripts/temp/app.js'
+       }
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.config('uglify', {
+        scripts: {
+            files: {
+                'app/static/scripts/app.min.js' : 'app/static/scripts/temp/app.js'
+            }
+        }
+    });
+
     grunt.loadNpmTasks("grunt-targethtml");
     grunt.config("targethtml", {
         "prod": {
@@ -41,6 +64,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', 'Builds the app', ['bowercopy']);
 
-    grunt.registerTask('package', 'Task for packaging up app ready for deployment', ['cssmin', 'targethtml']);
+    grunt.registerTask('package', 'Task for packaging up app ready for deployment',
+        ['cssmin', 'concat', 'uglify', 'targethtml']);
 
 };
