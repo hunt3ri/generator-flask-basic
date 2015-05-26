@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 echo "Creating Virtual Env"
 echo "===================="
 echo ""

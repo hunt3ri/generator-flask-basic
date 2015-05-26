@@ -33,13 +33,17 @@ module.exports = yeoman.generators.Base.extend({
 
     writing: {
         app: function () {
-            console.log('Scaffolding Flask Basic app in directory : ' + this.appName)
+            console.log('Scaffolding Flask Basic app in directory : ' + this.appName);
+
             this.mkdir(this.appName);
             var appDir = this.appName + "/app";
             this.mkdir(appDir);
+
+            this.bulkDirectory('_config', this.appName + '/config', null);
+            this.bulkDirectory('_tests', this.appName + '/tests', null);
             this.bulkDirectory('_static', appDir + '/static', null);
             this.bulkDirectory('_templates', appDir + '/templates', null);
-            this.bulkDirectory('_web', appDir + '/web', null)
+            this.bulkDirectory('_web', appDir + '/web', null);
             this.copy('__init__.py', appDir + '/__init__.py', null);
             this.copy('_root/manage.py', this.appName + '/manage.py', null);
             this.copy('_root/.gitignore', this.appName + '/.gitignore', null);

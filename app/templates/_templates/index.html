@@ -2,6 +2,13 @@
 
 {% block page_content %}
     <div data-ng-controller="HelloWorldController">
+         <!--Example Directive><!-->
         <hello-world name="greeting"></hello-world>
+
+         <!--Example of using our Jinga Angular filter, so that only Angular evaluates this expression><!-->
+        <h2>Hi {{'greeting.name' | angular}}</h2>
+
+         <!--Example of us passing some data to the form from Flask><!-->
+        <h3>Yo {{ flask_test }}</h3>
     </div>
 {% endblock %}

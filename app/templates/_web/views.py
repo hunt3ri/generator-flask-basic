@@ -4,7 +4,7 @@ from . import main
 
 @main.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', flask_test="Dude!")
 
 @main.route('/about')
 def about():
