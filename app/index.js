@@ -49,7 +49,6 @@ module.exports = yeoman.generators.Base.extend({
             this.copy('_root/.gitignore', this.appName + '/.gitignore', null);
             this.copy('_root/requirements.txt', this.appName + '/requirements.txt', null);
             this.copy('_root/gruntfile.js', this.appName + '/gruntfile.js', null);
-            this.copy('_root/install.sh', this.appName + '/install.sh', null);
 
             this.fs.copyTpl(
                 this.templatePath('_root/package.json'),
@@ -67,7 +66,7 @@ module.exports = yeoman.generators.Base.extend({
     },
 
   install: function () {
-      console.log("Yeoman step complete, navigate to your new app dir and type - . ./install.sh  - to install dependencies");
+      console.log("Yeoman step complete, navigate to your new app dir and type - . ./config/install.sh  - to install dependencies");
       /*this.spawnCommand('pyvenv', [this.appName + '/venv']);
       this.spawnCommand('source', ['./' + this.appName + '/venv/bin/activate']);*/
   }

@@ -48,6 +48,14 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-karma');
+    grunt.config('karma', {
+        unit: {
+            configFile: './config/karma.conf.js',
+            singleRun: true
+        }
+    });
+
     grunt.loadNpmTasks("grunt-targethtml");
     grunt.config("targethtml", {
         "prod": {
@@ -64,7 +72,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', 'Builds the app', ['bowercopy']);
 
+    grunt.registerTask('test', 'Runs the tests', ['karma']);
+
     grunt.registerTask('package', 'Task for packaging up app ready for deployment',
-        ['cssmin', 'concat', 'uglify', 'targethtml']);
+        ['karma', 'cssmin', 'concat', 'uglify', 'targethtml']);
 
 };
