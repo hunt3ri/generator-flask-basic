@@ -56,6 +56,15 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-protractor-runner');
+    grunt.config('protractor', {
+        e2e: {
+            options: {
+                configFile: './config/protractor.conf.js'
+            }
+        }
+    });
+
     grunt.loadNpmTasks("grunt-targethtml");
     grunt.config("targethtml", {
         "prod": {

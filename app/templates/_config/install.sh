@@ -21,6 +21,7 @@ echo "=================================="
 echo ""
 
 npm install
+webdriver-manager update
 
 echo ""
 echo "Congrats all dependencies installed"
