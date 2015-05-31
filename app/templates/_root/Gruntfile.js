@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
 
-
     grunt.loadNpmTasks("grunt-bowercopy");
     grunt.config("bowercopy", {
         options: {
@@ -11,7 +10,16 @@ module.exports = function(grunt) {
                 destPrefix: 'app/static/scripts/vendor'
             },
             files: {
-                'angular/angular.js': 'angular/angular.js'
+                'angular/angular.js': 'angular/angular.js',
+                'angular-bootstrap/ui-bootstrap-tpls.js': 'angular-bootstrap/ui-bootstrap-tpls.js'
+            }
+        },
+        css: {
+            options: {
+                destPrefix: 'app/static/css/vendor'
+            },
+            files: {
+                'bootstrap/bootstrap.css': 'bootstrap/dist/css/bootstrap.css'
             }
         }
     });
