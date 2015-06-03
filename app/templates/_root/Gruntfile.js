@@ -89,7 +89,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', 'Builds the app', ['bowercopy']);
 
-    grunt.registerTask('test', 'Runs the tests', ['karma']);
+    grunt.registerTask('test', 'Runs the tests', ['karma', 'protactor']);
 
     grunt.registerTask('package', 'Task for packaging up app ready for deployment',
         ['karma', 'cssmin', 'concat', 'uglify', 'targethtml']);
